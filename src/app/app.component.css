@@ -1,0 +1,347 @@
+  
+.blink {
+  height:50px;
+  width: 50px; 
+  border-radius: 50px;
+  position: fixed;
+  right: 0px;
+  animation: blink 2s steps(5, start) infinite;
+  -webkit-animation: blink 1s steps(5, start) infinite;
+}
+
+@keyframes blink {
+  to {
+    visibility: hidden;
+  }
+}
+@-webkit-keyframes blink {
+  to {
+    visibility: hidden;
+  }
+}
+  
+  /*carousel changes start*/
+
+  #carouselExampleControls{
+    /* margin: 50px; */
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .carousel-inner img {
+    height: 500px;
+    width: 2000px;
+    animation: zoomAndRotateAnimation 5s  ; /* 5 seconds, alternate back and forth */
+    cursor: pointer; 
+  }
+  
+  @keyframes zoomAndRotateAnimation {
+    0% {
+      transform: scale(5) rotate(300deg);
+    }
+    
+    100% {
+      transform: scale(1) rotate(360deg);
+    }
+  }
+
+  /*carousel changes end*/
+
+  
+/*text changes start*/
+.imgColor{
+  background-color: skyblue;
+}
+
+.riceFactory {
+  background: url(https://i.pinimg.com/originals/15/e0/fe/15e0fe9e4da2531df1d34aaac66861f1.gif)   -20px -20px no-repeat;
+  -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
+  display:block;
+  font-size: 50px;
+  text-align: center;
+  margin-top: -20px;
+  font-weight: bold;
+  background-size: cover;
+  margin-top: 20px;
+}
+/*text changes end*/
+
+
+ /*heading changes start*/  
+.heading{
+  text-align: center;
+  padding: 25px;
+  opacity: 0;
+  color: white;
+  font-size: 30px;
+  font-weight: 700;
+  position: relative;
+  z-index: 999;
+  animation: slideTop 1s ease forwards;
+  animation-delay: calc(.2s * var(--i));
+}
+
+.heading span{
+  background-color: #00cc00;
+  display: inline-block;
+  padding: 0.5rem 3rem;
+  clip-path: polygon(100% 0, 95% 50%, 100% 99%, 0% 100%, 5% 50%, 0% 0%);
+}
+
+@keyframes slideTop{
+  0%{
+    transform: translateY(100px);
+    opacity: 0;
+  }
+  100%{
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+ /*heading changes end*/  
+
+ 
+/*basmati rice box start*/
+.container .box{
+  position: relative;
+  width: 250px;
+  height: 250px;
+  margin: 10px;
+  transform-style: preserve-3d;
+  perspective: 1000px;
+  cursor: pointer;
+}
+
+.container .box .body{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  transform-style: preserve-3d;
+  transition: 0.9s ease;
+}
+
+.container .box .body .imgContainer{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  transform-style: preserve-3d;
+}
+
+.container .box .body .imgContainer img{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.container .box .body .content{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #333;
+  backface-visibility: hidden;
+  transform-style: preserve-3d;
+  transform: rotateY(180deg);
+}
+
+.container .box:hover .body{
+  transform: rotateY(180deg);
+}
+
+.container .box .body .content div{
+  transform-style: preserve-3d;
+  padding: 20px;
+  background: linear-gradient(45deg, #2E3192 ,#1BFFFF);
+  transform: translateZ(100px);
+}
+
+.container .box .body .content div h3{
+  letter-spacing: 1px;
+}
+
+/*basmati rice box end*/
+
+/*card changes start*/
+  .img1{
+    height: 100px;
+    width: 100px;
+    padding: 10px;
+  }
+ 
+  .card{
+    overflow: hidden;
+  }
+
+  .card a {
+    text-decoration: none;
+    color: white;
+  } 
+
+  .card img{
+    -webkit-transition:all .9s ease; 
+    -moz-transition:all .9s ease; 
+    -o-transition:all .9s ease;
+    -ms-transition:all .9s ease; 
+    width: 100%;
+    height: 200px;
+  }
+
+  .card img:hover{
+    opacity: 0.7;
+    overflow: hidden;
+    -webkit-transform:scale(1.15);
+    -moz-transform:scale(1.15);
+    -ms-transform:scale(1.15);
+    -o-transform:scale(1.15);
+    transform:scale(1.15);
+  }
+
+  /*card changes end*/
+
+  /*whatsapp changes start*/
+
+  .wapp {
+     background-color: rgb(100, 149, 237);
+    position: fixed;
+    color: white;
+    padding: 15px;
+    border-radius: 25px;
+    float: right;
+  }
+
+  .wapp a{
+    color: white;
+    text-decoration: none;
+  }
+
+  /*whatsapp changes end*/
+
+  /*contactUs changes start*/
+
+  #contact i.fa {
+    display: inline-block;
+    border-radius: 60px;
+    box-shadow: 0 0 2px #888;
+    background-color: white;
+    color: rgb(72, 135, 10);
+    font-size: 15px;
+  }
+
+  #contact .cntus {
+    background-color: transparent; 
+    border: none; 
+    border-bottom: 1px solid white; 
+    color: white;
+    padding: 10px;
+  }
+
+  /*contactUs changes end*/
+
+  /*gallery changes start*/
+.slider {
+	height: 250px;
+  position: relative;
+  margin: auto;
+  width: 90%;
+  display: grid;
+ 	place-items: center;
+  overflow: hidden;
+}
+
+.slide-track {
+	display: flex;
+	width: calc(250px * 18);
+	animation: scroll 20s linear infinite;
+}
+
+.slide-track:hover {
+	animation-play-state: paused;
+}
+
+.slideImg {
+	height: 200px;
+	width: 250px;
+	display: flex;
+	align-items: center;
+	padding: 15px;
+	perspective: 100px;
+}
+
+.slideImg img {
+	width: 100%;
+  height: 200px;
+}
+
+.slideImg img:hover {
+	transform: translateZ(20px);
+}
+
+.slider::before,
+.slider::after {
+	background: linear-gradient(to right, rgba(255,255,255,1) 0%,
+rgba(255,255,255,0) 100%);
+content: '';
+height: 100%;
+position: absolute;
+width: 15%;
+z-index: 2;
+}
+
+.slider::before {
+	left: 0;
+  top: 0;
+}
+
+
+.slider::after {
+	right: 0;
+	top: 0;
+	transform: rotateZ(180deg);
+}
+
+@keyframes scroll {
+	0% {
+		transform: translateX(0);
+	}
+	100% {
+		transform: translateX(calc(-250px * 3));
+	}
+}
+
+#gallery {
+  place-items: center;
+  display: grid;
+}
+
+/*gallery changes end*/
+
+.section:nth-child(1){
+  background-image: url('https://www.ghanigroup.com.pk/wp-content/uploads/photo-gallery/imported_from_media_libray/Agro-Farming-Banner.jpg?bwg=1603110664');
+  width: 100%; 
+  height: 600px; 
+  background-size: 100% 100%;  
+  background-repeat: no-repeat;
+}
+
+@media only screen and (max-width: 480px) {
+  .wapp {
+    position: fixed;
+    color: black;
+    bottom: 0px;
+  }
+
+  .blink {
+    bottom: 20px;
+    overflow: visible;
+  }
+}

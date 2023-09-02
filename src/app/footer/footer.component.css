@@ -1,0 +1,15 @@
+.fa{
+    margin: 5px;
+    font-size: 20px;
+    height: 40px;
+    width: 40px;
+    text-align: center;
+    padding: 1em 0.6em;
+}
+
+::placeholder {
+    color: white;
+    opacity: 1; /* Firefox */
+  }
+
+  

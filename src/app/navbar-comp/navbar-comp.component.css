@@ -1,0 +1,87 @@
+/*navbar changes start*/
+.navbar{
+    background-color: #00cc00;
+}
+
+.navbar-brand{
+  opacity: 0;
+  animation: slideRight 1s ease forwards;
+}
+
+@keyframes slideRight{
+  0%{
+    transform: translateX(-100px);
+    opacity: 0;
+  }
+  100%{
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+.navbar li a{
+  display: inline-block;
+  opacity: 0;
+  animation: slideTop 1s ease forwards;
+  animation-delay: calc(.2s * var(--i));
+  color: white;
+  font-weight: bold;
+}
+
+@keyframes slideTop{
+  0%{
+    transform: translateY(100px);
+    opacity: 0;
+  }
+  100%{
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+nav img {
+  height: 50px;
+  width: 50px;
+  border-radius: 50px;
+}
+
+.dropdown-item a {
+  color: #333;
+}
+
+.dropdown-menu {
+  color: #00cc00;
+  background-color: #00cc00;
+}
+
+form.search input[type="text"] {
+    color: #333;
+    background-color: white;
+    padding: 5px 10px;
+    margin: 10px;
+    display: inline-block;
+    -ms-transform: skewX(-20deg);
+    -webkit-transform: skewX(-20deg);
+    transform: skewX(-20deg);
+    width: 250px;
+    margin-right: 0px;
+    border-right: none;
+    border-radius: 5px;
+}
+
+  form.search button {
+    color: white;
+    background-color: rgb(246, 246, 106);
+    text-align: center;
+    padding: 5px 10px;
+    margin: 10px;
+    display: inline-block;
+    -ms-transform: skewX(-20deg);
+    -webkit-transform: skewX(-20deg);
+    transform: skewX(-20deg);
+    width: 60px;
+    border-left: none;
+    border-radius: 5px;
+  }
+
+  /*navbar changes end*/
